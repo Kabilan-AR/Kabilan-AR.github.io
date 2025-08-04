@@ -1,0 +1,528 @@
+/* RESET + BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  background: #111;
+  overflow-x: hidden;
+  position: relative;
+  line-height: 1.6;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*Page specific Colors*/
+.counterstrike{
+  color:#e6c234
+}
+.magical-fantasy
+{
+  color:rgb(155, 54, 155)
+}
+.mr-interior{
+  color:rgb(109, 180, 224)
+}
+.diwali{
+  color:rgb(211, 211, 77)
+}
+.ar-furnitures{
+  color:#ccc
+}
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  width: 100%;
+  padding: 20px 50px;
+  background-color: rgba(18, 18, 18, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.logo-symbol {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+ font-family: 'Chivo', sans-serif;
+  font-weight: 700;           /* 700 for bold, or use 200 for lighter */
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #34c6e6;
+}
+.hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+    }
+/* =========================
+   VIDEO HERO
+========================= */
+.video-hero {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  z-index: -1;
+  filter: brightness(0.5);
+}
+
+.overlay-content.bottom-center {
+ position: absolute;
+  bottom: 40px;
+  right: 20%;
+  transform: translateX(-10%); /* Centers horizontally */
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.video-info h1 {
+  color: #fff;
+  font-size: 36px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  margin-bottom: 20px;
+}
+
+.tech-list {
+ 
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7.5px;
+  justify-content: center;
+}
+
+.tech-list li {
+  background-color: #34c6e6;
+  color: #111;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+/* =========================
+   PROJECT Meta SECTION
+========================= */
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.meta-item {
+  flex: 1 1 250px;
+  min-width: 220px;
+  margin-left: 175px;
+}
+
+.meta-item h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #34c6e6;
+}
+
+.meta-item p {
+  color: #ccc;
+  font-size: 16px;
+}
+
+/* =========================
+   PROJECT DETAIL SECTION
+========================= */
+.project-detail {
+  padding: 50px 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.project-detail h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+.heading{
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+.description {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+.mydescription{
+  padding-left: 2px;
+  font-size: 18px;
+}
+.goal-list {
+  list-style-type: disc; /* or circle, square */
+  padding-left: 20px;
+  font-size: 18px;
+  color: #ccc; /* Light gray for dark backgrounds */
+  line-height: 1.6;
+}
+
+.goal-list li {
+  margin-bottom: 2px;
+}
+/* =========================
+   FADE IN ANIMATION
+========================= */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   PROJECT MEDIA
+========================= */
+.project-video {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 30px 0;
+}
+
+.project-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.02);
+}
+.project-gallery{
+user-select: none;           /* Prevent text/image selection */
+  -webkit-user-drag: none;     /* Prevent dragging on Safari */
+  -khtml-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  pointer-events: auto;
+}
+ 
+
+/* =========================
+   LIGHTBOX MODAL
+========================= */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80vh;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  background: transparent;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10001;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.lightbox-arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+  color: #34c6e6;
+}
+
+.left-arrow {
+  left: 30px;
+}
+
+.right-arrow {
+  right: 30px;
+}
+
+/* Close X */
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  background: transparent;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 10001;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.lightbox-close:hover {
+  transform: scale(1.2);
+  color: #f44;
+}
+/* Scroll Disabe when in Gallery*/
+body.noscroll {
+  overflow: hidden;
+}
+/* To prevent selecting images and left click*/
+.lightbox-overlay,
+.lightbox-img,
+.lightbox-arrow svg,
+.lightbox-close svg {
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+}
+
+
+/* Footer */
+    .footer-section {
+      padding: 30px;
+      text-align: center;
+      font-size: 14px;
+      border-top: 1px solid #333;
+    }
+/* =========================
+   GLOBAL IMPROVEMENTS
+========================= */
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Replace fixed margin in meta-item with responsive padding */
+.meta-item {
+  margin-left: 0;
+  padding: 10px;
+}
+
+/* Make logo and video title scalable */
+.logo-text {
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+.video-info h1 {
+  font-size: clamp(24px, 5vw, 36px);
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN (Tablet and smaller)
+========================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+.goal-list {
+    font-size: 16px;
+    padding-left: 15px;
+  }
+
+  .goal-list li {
+    margin-bottom: 8px;
+  }
+  .logo-text {
+    font-size: 16px;
+  }
+
+  .video-info h1 {
+    font-size: 28px;
+  }
+
+  .video-hero {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-detail {
+    padding: 30px 20px;
+  }
+
+  .lightbox-img {
+    max-width: 95%;
+    max-height: 70vh;
+  }
+
+  .left-arrow,
+  .right-arrow {
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+  }
+
+  .lightbox-close {
+    top: 15px;
+    right: 15px;
+    width: 28px;
+    height: 28px;
+  }
+  .hamburger{
+    display:block;
+  }
+  .overlay-content.bottom-center {
+
+  right: 20%;
+  transform: translateX(-10%); /* Centers horizontally */
+  text-align: center;
+
+}
+
+/* Optional: limit max width on large screens */
+.video-info {
+  max-width: 800px;
+}
+.video-info h1 {
+    font-size: 24px;
+  }
+
+  .tech-list {
+    gap: 5px;
+  }
+
+  .tech-list li {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+
+/* =========================
+   EXTRA-SMALL DEVICES (Mobile)
+========================= */
+@media (max-width: 480px) {
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-list li {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .video-info h1 {
+    font-size: 24px;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+  }
+
+  .meta-item {
+    text-align: center;
+    padding: 20px 10px;
+  }
+  .hamburger{
+    display:block;
+  }
+}
