@@ -1,23 +1,22 @@
-
- //Resume Link
- const resumeLink = "https://drive.google.com/file/d/1KK4GKnBej8kHL7VNaYn-bi4WA3q3fWNj/view?usp=sharing";
- const githubLink="https://github.com/Kabilan-AR";
-  const linkedinLink="https://www.linkedin.com/in/kabilan-a-r-70b093258";
- //Get Resume Link
- document.addEventListener("DOMContentLoaded", () => {
-    const resumeAnchor = document.querySelector(".resume-link");
-    if (resumeAnchor) resumeAnchor.href = resumeLink;
-  });
-  //Get Github Link
- document.addEventListener("DOMContentLoaded", () => {
-    const githubAnchor = document.querySelector(".github-link");
-    if (githubAnchor) githubAnchor.href = githubLink;
-  });
-  //Get LinkedInlink
- document.addEventListener("DOMContentLoaded", () => {
-    const linkedinAnchor = document.querySelector(".linkedin-link");
-    if (linkedinAnchor) linkedinAnchor.href = linkedinLink;
-  });
+//Resume Link
+const resumeLink = "https://drive.google.com/file/d/1KK4GKnBej8kHL7VNaYn-bi4WA3q3fWNj/view?usp=sharing";
+const githubLink = "https://github.com/Kabilan-AR";
+const linkedinLink = "https://www.linkedin.com/in/kabilan-a-r-70b093258";
+//Get Resume Link
+document.addEventListener("DOMContentLoaded", () => {
+  const resumeAnchor = document.querySelector(".resume-link");
+  if (resumeAnchor) resumeAnchor.href = resumeLink;
+});
+//Get Github Link
+document.addEventListener("DOMContentLoaded", () => {
+  const githubAnchor = document.querySelector(".github-link");
+  if (githubAnchor) githubAnchor.href = githubLink;
+});
+//Get LinkedInlink
+document.addEventListener("DOMContentLoaded", () => {
+  const linkedinAnchor = document.querySelector(".linkedin-link");
+  if (linkedinAnchor) linkedinAnchor.href = linkedinLink;
+});
 // Toggle mobile menu
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
@@ -37,17 +36,17 @@ navItems.forEach(link => {
 });
 //Fade-in animation 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target); // Stop observing once visible (performance)
-      }
-    });
-  }, {
-    threshold: 0.1
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target); // Stop observing once visible (performance)
+    }
   });
+}, {
+  threshold: 0.1
+});
 
-  document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
 
 // Lightbox Functionality
 const images = document.querySelectorAll('.gallery-img');
