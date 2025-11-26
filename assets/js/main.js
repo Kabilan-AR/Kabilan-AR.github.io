@@ -103,7 +103,7 @@ const slides = document.querySelectorAll('.slide');
   }
 
   showSlides();
-  setInterval(showSlides, 2400);
+  setInterval(showSlides, 3200);
   document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".slide");
     let loadedCount = 0;

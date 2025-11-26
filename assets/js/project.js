@@ -128,4 +128,4 @@ const slides = document.querySelectorAll('.slide');
   }
 
   showSlides();
-  setInterval(showSlides, 2400);
+  setInterval(showSlides, 3400);
