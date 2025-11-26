@@ -92,3 +92,35 @@ document.addEventListener('keydown', e => {
   else if (e.key === 'ArrowLeft') prevArrow.click();
   else if (e.key === 'Escape') lightbox.classList.remove('active');
 });
+//Slideshow
+const slides = document.querySelectorAll('.slide');
+  let index = 0;
+
+  function showSlides() {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+    index = (index + 1) % slides.length;
+  }
+
+  showSlides();
+  setInterval(showSlides, 2400);
+  document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".slide");
+    let loadedCount = 0;
+    const total = slides.length;
+
+    slides.forEach(slide => {
+        const img = new Image();
+        img.src = slide.style.backgroundImage.replace(/url\((['"])?(.*?)\1\)/, "$2");
+
+        img.onload = () => {
+            loadedCount++;
+            if (loadedCount === total) {
+                document.getElementById("preloader").classList.add("hide");
+                setTimeout(() => {
+                    document.getElementById("preloader").remove();
+                }, 600); // matches CSS fade time
+            }
+        };
+    });
+});

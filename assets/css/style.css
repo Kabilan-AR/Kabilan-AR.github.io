@@ -90,14 +90,14 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-left: 100px;
+
   padding: 0 20px;
   position: relative;
   z-index: 1;
 }
 
 .hero-section h1 {
-  padding-top: 300px;
+  padding-top: 350px;
   padding-right: 1000px;
   font-size: 48px;
   margin-bottom: 10px;
@@ -108,8 +108,49 @@ body {
   font-size: 20px;
   color: #ccc;
 }
+/* =========================
+   HERO SLIDESHOW
+========================= */
+
+.slideshow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  /* You can change per-slide */
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Extra dark overlay for readability */
+.hero-section::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.55);
+  z-index: -1;
+}
 /* Fullscreen Video Background */
-#bg-video {
+/*#bg-video {
   position: fixed;
   top: 0;
   left: 0;
@@ -118,10 +159,9 @@ body {
   object-fit: cover;
   opacity: 0.8;
   z-index: -1;
-}
+}*/
 
-/* Optional: darken video for readability */
-body::before {
+/*body::before {
   content: "";
   position: fixed;
   top: 0;
@@ -129,9 +169,8 @@ body::before {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.6);
-  /* adjust opacity as needed */
   z-index: -1;
-}
+}*/
 /* =========================
   ACHIEVEMENT SECTION
 ========================= */
@@ -489,9 +528,7 @@ justify-content: center;*/
 .hamburger {
     display: block;
   }
-  
-
-  #bg-video {
+  /* #bg-video {
     position: fixed;
     top: 0;
     left: 0;
@@ -499,7 +536,7 @@ justify-content: center;*/
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-  }
+  } */
 
   .hero-section {
     height: 100vh;
@@ -512,7 +549,9 @@ justify-content: center;*/
     text-align: center;
     padding: 20px;
   }
-
+.slide {
+    background-position: center ; /* prevent important content from cropping */
+  }
   .hero-section h1 {
     font-size: 28px;
     padding: 0;
@@ -566,8 +605,11 @@ justify-content: center;*/
     width: 28px;
     height: 28px;
   }
+  
+  
 }
- 
+
+
 /* =========================
    FADE IN ANIMATION
 ========================= */
